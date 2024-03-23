@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<title>Авторизация</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="https://api-maps.yandex.ru/v3/?apikey=b756749a-c9d8-4f04-a6c7-2653f5d9d0b7&lang=ru_RU"></script>
+</head>
+
+<body>
+  <div class='wrapper'>
+    <header class="header ">
+	<div class="header__body">
+		<div class="header__container _container">
+			<div class="header__content">
+				<a href="index.html" class="header__logo">
+					<svg class='icon icon-logo'>
+						<use xlink:href='img/svg/sprite.svg#logo'></use>
+					</svg>
+				</a>
+				<div class="header__operating-mode" data-da=".header__nav_block,576,first">
+					<b>24/7</b>
+					<span>склад работает круглосуточно</span>
+				</div>
+				<div class="header__contacts">
+					<a href="tel:84951111111" class="header__phone">8 (495) 111-11-11</a>
+					<address data-da=".header__nav_block,576,last"><span>м. Борисово</span><span>Борисовские пруды 22 к4,
+							с1</span></address>
+				</div>
+				<a href="authorization.html" class="header__account account-link-header">
+					<i>
+						<svg class='icon icon-account'>
+							<use xlink:href='img/svg/sprite.svg#account'></use>
+						</svg>
+					</i>
+					<span>Личный кабинет</span>
+				</a>
+				<div class="header-burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<nav class="header__nav">
+				<ul class="header__ul">
+					<li class="header__li"><a href="calculator.html" class="header__link hover-link">Калькулятор</a></li>
+					<li class="header__li"><a href="storage-services.html" class="header__link hover-link">Услуги хранения</a>
+					</li>
+					<li class="header__li"><a href="how-use-storage.html" class="header__link hover-link">Как пользоваться
+							кладовкой</a></li>
+					<li class="header__li"><a href="faq.html" class="header__link hover-link">Вопрос-ответ</a></li>
+					<li class="header__li"><a href="about.html" class="header__link hover-link">О нас</a></li>
+				</ul>
+				<div class="header__nav_block">
+					<a href="tel:84951111111" class="header__phone">8 (495) 111-11-11</a>
+					<button class="header__nav_btn-call"><span>Заказать обратный звонок</span></button>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+    <main class='main'>
+      <div class="path">
+        <div class="path__container _container">
+          <div class="path__body">
+            <div class="path__content path-content">
+              <a href="index.html" class="path__link hover-link">Главная</a>
+              <span class="path__sep">/</span>
+              <span>Вход в личный кабинет</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="authorization">
+        <div class="authorization__container _container">
+          <div class="authorization__body" data-tabs-init="authorization-tabs">
+            <div class="authorization__tabs">
+              <button class="authorization__tab button _my-tabs-btn btn-authorization"><span>Авторизация</span></button>
+              <button class="authorization__tab button _my-tabs-btn btn-registration"><span>Регистрация</span></button>
+            </div>
+            <div class="authorization__content content-authorization _my-tabs-content">
+              <h2 class="authorization__title h2">Авторизация</h2>
+              <div class="authorization__wrapper">
+                <form class="authorization__form form-authorization">
+                  <div class="authorization__form_wrap-inputs">
+                    <label class="authorization__wrap-input wrap-input">
+                      <input type="tel" name="username" placeholder="Номер телефона" inputmode="tel"
+                        class="authorization__input input">
+                    </label>
+                    <label class="authorization__wrap-input wrap-input">
+                      <input type="password" name="password" placeholder="Пароль" class="authorization__input input">
+                    </label>
+                  </div>
+                  <div class="authorization__form_info">
+                    У Вас ещё нет аккаунта? <a href="" class="tab-registration">Зарегистрировать новый аккаунт</a>
+                  </div>
+                  <div class="authorization__form_bottom">
+
+                    <button type="submit" class="authorization__form_button button-2"><span>Войти</span></button>
+                    <span class="authorization__form_forgot-password">Забыли пароль?</span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="authorization__content content-registration _my-tabs-content">
+              <h2 class="authorization__title h2">Регистрация</h2>
+              <div class="authorization__wrapper">
+
+                <form class="authorization__form form-send-phone">
+                  <div class="authorization__form_wrap-inputs">
+                    <label class="authorization__wrap-input wrap-input wrap-input-btn">
+                      <input type="tel" name="username" placeholder="Номер телефона" inputmode="tel"
+                        class="authorization__input input">
+                      <button type="submit" class="authorization__form_button-input button button-input"><span>Получить
+                          код</span></button>
+                    </label>
+                  </div>
+                </form>
+
+                <form class="authorization__form form-send-code _disabled">
+                  <div class="authorization__form_wrap-inputs">
+                    <label class="authorization__wrap-input wrap-input wrap-input-btn">
+                      <input type="text" name="code" placeholder="Код из СМС" inputmode="tel"
+                        class="authorization__input input" disabled>
+                      <button type="submit" class="authorization__form_button-input button button-input"
+                        disabled><span>Подтвердить</span></button>
+                    </label>
+                  </div>
+                </form>
+
+                <form class="authorization__form form-registration _disabled">
+                  <div class="authorization__form_wrap-inputs">
+                    <label class="authorization__wrap-input wrap-input">
+                      <input type="email" name="email" placeholder="Электронная почта"
+                        class="authorization__input input" disabled>
+                    </label>
+                    <label class="authorization__wrap-input wrap-input">
+                      <input type="password" name="password" placeholder="Пароль" class="authorization__input input"
+                        disabled>
+                    </label>
+                    <label class="authorization__wrap-input wrap-input">
+                      <input type="password" name="repassword" placeholder="Подтвердить пароль"
+                        class="authorization__input input" disabled>
+                    </label>
+                  </div>
+
+                  <div class="authorization__form_bottom">
+                    <div class="privacy-policy">
+                      <input type="checkbox" name="privacy_policy" id="privacy-policy-1"
+                        class="privacy-policy__input-checkbox input-checkbox">
+                      <label for="privacy-policy-1" class="privacy-policy__label-checkbox label-checkbox">
+                        <svg class='icon icon-check'>
+                          <use xlink:href='img/svg/sprite.svg#check'></use>
+                        </svg>
+                      </label>
+                      <p class="privacy-policy__text">Ознакомлен с <a href="">политикой конфиденциальности</a></p>
+                    </div>
+                    <button type="submit" class="authorization__form_button button-2"
+                      disabled><span>Зарегистрироваться</span></button>
+                    <div class="authorization__form_info">
+                      Уже зарегистрированы? <a href="" class="tab-authorization">Войти в аккаунт</a>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__body">
+			<div class="footer__content">
+				<div class="footer__block">
+					<a href="tel:78001111111" class="footer__phone">+7 (800) 111-11-11</a>
+					<a href="faq.html" class="footer__button button-2"><span>Заказать звонок</span></a>
+				</div>
+				<div class="footer__block data-da">
+					<p class="footer__mail">info@mesto.store</p>
+					<span>Клиентская служба</span>
+				</div>
+				<div class="footer__block">
+					<div class="footer__messengers" data-da=".footer__block.data-da,992,last">
+						<a href="#" class="footer__messenger">
+							<svg class='icon icon-vk'>
+								<use xlink:href='img/svg/sprite.svg#vk'></use>
+							</svg>
+						</a>
+						<a href="#" class="footer__messenger">
+							<svg class='icon icon-youtube'>
+								<use xlink:href='img/svg/sprite.svg#youtube'></use>
+							</svg>
+						</a>
+						<a href="#" class="footer__messenger">
+							<svg class='icon icon-telegram'>
+								<use xlink:href='img/svg/sprite.svg#telegram'></use>
+							</svg>
+						</a>
+					</div>
+					<span data-da=".footer__block.data-da,992,last">Мы в соцсетях</span>
+				</div>
+				<div class="footer__block">
+					<address class="footer__address">
+						<svg class='icon icon-placemark'>
+							<use xlink:href='img/svg/sprite.svg#placemark'></use>
+						</svg>
+						<span>Борисовские пруды 22 к4, с1</span>
+					</address>
+				</div>
+				<div class="footer__block">
+					<b>ООО «Место»</b>
+					<span>ИНН / КПП:</span>
+					<span>ОГРН:</span>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<p>Обращаем ваше внимание на то, что данный Интернет-сайт носит исключительно информационный характер и ни при
+					каких
+					условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской
+					Федерации.
+					Для получения подробной информации о стоимости аренды боксов, сопутствующих товаров, транспортных услугах и
+					страховании,
+					обращайтесь к менеджерам по продажам МЕСТО. Права на сайт принадлежат ООО «МЕСТО» (ИНН , ОГРН ) тел. +, адрес
+					эл. почты
+					info@mesto.store</p>
+				<p>© Все права защищены ООО «МЕСТО»</p>
+			</div>
+		</div>
+	</div>
+</footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/libs/nouislider/nouislider.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>

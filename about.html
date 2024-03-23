@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon/Gulp.svg">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="https://api-maps.yandex.ru/v3/?apikey=b756749a-c9d8-4f04-a6c7-2653f5d9d0b7&lang=ru_RU"></script>
+</head>
+
+<body>
+  <div class='wrapper'>
+    <header class="header ">
+	<div class="header__body">
+		<div class="header__container _container">
+			<div class="header__content">
+				<a href="index.html" class="header__logo">
+					<svg class='icon icon-logo'>
+						<use xlink:href='img/svg/sprite.svg#logo'></use>
+					</svg>
+				</a>
+				<div class="header__operating-mode" data-da=".header__nav_block,576,first">
+					<b>24/7</b>
+					<span>склад работает круглосуточно</span>
+				</div>
+				<div class="header__contacts">
+					<a href="tel:84951111111" class="header__phone">8 (495) 111-11-11</a>
+					<address data-da=".header__nav_block,576,last"><span>м. Борисово</span><span>Борисовские пруды 22 к4,
+							с1</span></address>
+				</div>
+				<a href="authorization.html" class="header__account account-link-header">
+					<i>
+						<svg class='icon icon-account'>
+							<use xlink:href='img/svg/sprite.svg#account'></use>
+						</svg>
+					</i>
+					<span>Личный кабинет</span>
+				</a>
+				<div class="header-burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<nav class="header__nav">
+				<ul class="header__ul">
+					<li class="header__li"><a href="calculator.html" class="header__link hover-link">Калькулятор</a></li>
+					<li class="header__li"><a href="storage-services.html" class="header__link hover-link">Услуги хранения</a>
+					</li>
+					<li class="header__li"><a href="how-use-storage.html" class="header__link hover-link">Как пользоваться
+							кладовкой</a></li>
+					<li class="header__li"><a href="faq.html" class="header__link hover-link">Вопрос-ответ</a></li>
+					<li class="header__li"><a href="about.html" class="header__link hover-link">О нас</a></li>
+				</ul>
+				<div class="header__nav_block">
+					<a href="tel:84951111111" class="header__phone">8 (495) 111-11-11</a>
+					<button class="header__nav_btn-call"><span>Заказать обратный звонок</span></button>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+    <main class="main">
+      <div class="path">
+        <div class="path__container _container">
+          <div class="path__body">
+            <div class="path__content path-content">
+              <a href="index.html" class="path__link hover-link">Главная</a>
+              <span class="path__sep">/</span>
+              <span>О нас</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="about">
+        <div class="about__container _container">
+          <div class="about__body">
+            <h1 class="about__title h2">О нас</h1>
+            <div class="about__content">
+              <p class="about__text text">Современному человеку непросто угнаться за всеми требованиями повседневной
+                жизни, и проблемы с хранением могут стать
+                помехой. Но не беспокойтесь, мы всегда готовы вам помочь! Независимо от того, решите Вы навести порядок
+                на чердаке или
+                просто немного упорядочить свои вещи, мы сделаем процесс поиска идеального места для хранения ваших
+                вещей простым и
+                удобным.</p>
+              <p class="about__text text">Считайте нас продолжением вашего дома или цепочки ваших поставок.</p>
+              <div class="about__row">
+                <div class="about__wp-t">
+                  <span>Адрес офиса</span>
+                  <address>м. Борисово<br>улица Борисовские Пруды, 22к4с1, Москва, 115612.</address>
+                </div>
+                <a href="tel:78006003255" class="about__phone">
+                  <svg class='icon icon-tel'>
+                    <use xlink:href='img/svg/sprite.svg#tel'></use>
+                  </svg>
+                  <span>+7(800) 600-32-55</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map section">
+  <div class="map__container _container">
+    <div class="map__body" data-tabs-init="map-tabs">
+      <div class="map__header">
+        <h2 class="map__title h2">Адреса кладовок МЕСТО</h2>
+        <div class="map__tabs">
+          <button class="map__tab _my-tabs-btn _tabs-bnt-active button"><span>На карте</span></button>
+          <button class="map__tab _my-tabs-btn button"><span>Списком</span></button>
+        </div>
+      </div>
+      <div class="map__content _my-tabs-content" id="yandex-map">
+        <div class="map__modal modal-info-all-warehouses _active">
+          <select name="rooms" class="map__modalselect select-map"></select>
+          <div class="map__modal_warehouses warehouses-modal-map">
+
+          </div>
+        </div>
+
+        <div class="map__modal modal-info-warehouse">
+        </div>
+      </div>
+      <div class="map__warehouses-list _my-tabs-content warehouses-list-map">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="guest-visit">
+        <div class="guest-visit__container _container">
+          <div class="guest-visit__body">
+            <h2 class="guest-visit__title h2">Оформите <br> гостевой визит</h2>
+            <p class="guest-visit__text text">Хотите заглянуть внутрь наших складов перед принятием решения о аренде?
+            </p>
+            <div class="guest-visit__content">
+              <ul class="guest-visit__list">
+                <li>Выберете локацию и любую свободную кладовку на ней</li>
+                <li>Заполните контактную информацию</li>
+                <li>Получите СМС с кодом доступа к кладовке</li>
+                <li>Посетите МЕСТО.кладовки в любое время в течение 24 часов</li>
+              </ul>
+              <button class="guest-visit__button button-3"><span>Оформить гостевой визит</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="advantages-storage section">
+        <div class="advantages-storage__container _container">
+          <div class="advantages-storage__body" data-tabs-init="advantages-storage-tabs">
+            <h2 class="advantages-storage__title h2">Преимущества хранения вещей</h2>
+            <div class="advantages-storage__content">
+              <div class="advantages-storage__images">
+                <img src="" alt="Картинка" class="_my-tabs-content">
+                <img src="" alt="Картинка" class="_my-tabs-content">
+                <img src="" alt="Картинка" class="_my-tabs-content">
+                <img src="" alt="Картинка" class="_my-tabs-content">
+                <img src="" alt="Картинка" class="_my-tabs-content">
+                <img src="" alt="Картинка" class="_my-tabs-content">
+              </div>
+              <div class="advantages-storage__tabs">
+                <div class="advantages-storage__tab _my-tabs-btn">
+                  <h5 class="advantages-storage__tab_title">Доступ к кладовкам 24/7</h5>
+                  <p class="advantages-storage__tab_text text">Персональный доступ к кладовке 24 часа, 7 дней в
+                    неделю.Вы так же можете оформить гостевой доступ выбрав интересующую
+                    вас кладовку. Посетить можно в любое удобное время в течение 24 часов.</p>
+                </div>
+                <div class="advantages-storage__tab _my-tabs-btn">
+                  <h5 class="advantages-storage__tab_title">Широкий выбор размеров</h5>
+                  <p class="advantages-storage__tab_text text">В наличии кладовки самых разных размеров. Если у вас мало
+                    вещей, вы не платите за место которое не используете</p>
+                </div>
+                <div class="advantages-storage__tab _my-tabs-btn">
+                  <h5 class="advantages-storage__tab_title">Повышенные меры безопасности</h5>
+                  <p class="advantages-storage__tab_text text">Система видеонаблюдения внутри и снаружи комплекса.
+                    Охрана территории по периметру и сигнализация.</p>
+                </div>
+                <div class="advantages-storage__tab _my-tabs-btn">
+                  <h5 class="advantages-storage__tab_title">Удобная зона разгрузки</h5>
+                  <p class="advantages-storage__tab_text text">Можно подогнать автомобиль непосредственно к воротам и
+                    выгрузить вещи из него прямо на тележку для транспортировки в
+                    кладовку</p>
+                </div>
+                <div class="advantages-storage__tab _my-tabs-btn">
+                  <h5 class="advantages-storage__tab_title">Тёплые и сухие кладовки</h5>
+                  <p class="advantages-storage__tab_text text">Во всех боксах можно хранить мягкую мебель и иные вещи,
+                    требующие бережного обращения. Температура в боксах не
+                    опускается ниже +12 С</p>
+                </div>
+                <div class="advantages-storage__tab _my-tabs-btn">
+                  <h5 class="advantages-storage__tab_title">Удобное расположение</h5>
+                  <p class="advantages-storage__tab_text text">В черте города. Рядом с основными транспортными
+                    развязками и ближайшими станциями метро</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions section">
+  <div class="questions__container _container">
+    <div class="questions__body">
+      <div class="questions__content">
+        <h2 class="questions__title h2">Остались вопросы?</h2>
+        <span class="questions__subtitle">Оставьте заявку и мы свяжемся с Вами</span>
+        <form class="questions__form form-questions">
+          <label class="questions__form_wrap-input">
+            <input type="tel" name="username" class="questions__form_input" placeholder="Номер телефона">
+          </label>
+          <label class="questions__form_wrap-input">
+            <input type="text" name="firstname" class="questions__form_input" placeholder="Имя">
+          </label>
+          <button type="submit" class="questions__form_button button">
+            <span>Отправить</span>
+          </button>
+          <div class="questions__form_bottom">
+            <input type="checkbox" name="personal_data" id="personal-data-0" class="questions__form_checkbox-input"
+              checked>
+            <label for="personal-data-0" class="questions__form_checkbox-label">
+              <svg class='icon icon-check'>
+                <use xlink:href='img/svg/sprite.svg#check'></use>
+              </svg>
+            </label>
+            <p class="questions__form_text text">Согласие на обработку персональных данных</p>
+          </div>
+        </form>
+      </div>
+      <div class="questions__img">
+        <img src="img/questions.jpg" alt="Картинка">
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="company-data">
+        <div class="company-data__container _container">
+          <div class="company-data__body">
+            <div class="company-data__content">
+              <div class="company-data__col">
+                <h4 class="company-data__title">Реквизиты компании</h4>
+                <ul class="company-data__list">
+                  <li>Общество с ограниченной ответственностью «МЕСТО»</li>
+                  <li>ОГРН 000000000000000</li>
+                  <li>ИНН 0000000000</li>
+                  <li>КПП 00000000</li>
+                  <li>Юр. адрес: 111111, г.Москва,<br>ул. Xxxxxxx, д. XX, стр. XXX, эт. X, пом./ком. X/X</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-rent cannot-stored section">
+  <div class="how-rent__container _container">
+    <div class="how-rent__body">
+      <h2 class="how-rent__title h2">Что нельзя хранить?</h2>
+      <div class="how-rent__wrap-text">
+        <p class="how-rent__text text">Оформляя договор аренды, вы соглашаетесь с этими условиями и берёте на
+          себя полную ответственность за содержимое своего</p>
+      </div>
+      <div class="how-rent__items">
+        <div class="how-rent__item">
+          <div class="how-rent__item_top">
+            <img src="img/icons/rad.png" alt="Иконка">
+          </div>
+          <p class="how-rent__item_text text">Токсичные и радиоактивные вещества</p>
+        </div>
+        <div class="how-rent__item">
+          <div class="how-rent__item_top">
+            <img src="img/icons/apple.png" alt="Иконка">
+          </div>
+          <p class="how-rent__item_text text">Продукты питания</p>
+        </div>
+        <div class="how-rent__item">
+          <div class="how-rent__item_top">
+            <img src="img/icons/dog.png" alt="Иконка">
+          </div>
+          <p class="how-rent__item_text text">Растения и животные</p>
+        </div>
+        <div class="how-rent__item">
+          <div class="how-rent__item_top">
+            <img src="img/icons/z.png" alt="Иконка">
+          </div>
+          <p class="how-rent__item_text text">Запрещенные к обороту на территории РФ предметы</p>
+        </div>
+        <div class="how-rent__item">
+          <div class="how-rent__item_top">
+            <img src="img/icons/mony.png" alt="Иконка">
+          </div>
+          <p class="how-rent__item_text text">Деньги и ценные бумаги</p>
+        </div>
+        <div class="how-rent__item">
+          <div class="how-rent__item_top">
+            <img src="img/icons/gun.png" alt="Иконка">
+          </div>
+          <p class="how-rent__item_text text">Оружие и взрывоопасные вещества</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__body">
+			<div class="footer__content">
+				<div class="footer__block">
+					<a href="tel:78001111111" class="footer__phone">+7 (800) 111-11-11</a>
+					<a href="faq.html" class="footer__button button-2"><span>Заказать звонок</span></a>
+				</div>
+				<div class="footer__block data-da">
+					<p class="footer__mail">info@mesto.store</p>
+					<span>Клиентская служба</span>
+				</div>
+				<div class="footer__block">
+					<div class="footer__messengers" data-da=".footer__block.data-da,992,last">
+						<a href="#" class="footer__messenger">
+							<svg class='icon icon-vk'>
+								<use xlink:href='img/svg/sprite.svg#vk'></use>
+							</svg>
+						</a>
+						<a href="#" class="footer__messenger">
+							<svg class='icon icon-youtube'>
+								<use xlink:href='img/svg/sprite.svg#youtube'></use>
+							</svg>
+						</a>
+						<a href="#" class="footer__messenger">
+							<svg class='icon icon-telegram'>
+								<use xlink:href='img/svg/sprite.svg#telegram'></use>
+							</svg>
+						</a>
+					</div>
+					<span data-da=".footer__block.data-da,992,last">Мы в соцсетях</span>
+				</div>
+				<div class="footer__block">
+					<address class="footer__address">
+						<svg class='icon icon-placemark'>
+							<use xlink:href='img/svg/sprite.svg#placemark'></use>
+						</svg>
+						<span>Борисовские пруды 22 к4, с1</span>
+					</address>
+				</div>
+				<div class="footer__block">
+					<b>ООО «Место»</b>
+					<span>ИНН / КПП:</span>
+					<span>ОГРН:</span>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<p>Обращаем ваше внимание на то, что данный Интернет-сайт носит исключительно информационный характер и ни при
+					каких
+					условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской
+					Федерации.
+					Для получения подробной информации о стоимости аренды боксов, сопутствующих товаров, транспортных услугах и
+					страховании,
+					обращайтесь к менеджерам по продажам МЕСТО. Права на сайт принадлежат ООО «МЕСТО» (ИНН , ОГРН ) тел. +, адрес
+					эл. почты
+					info@mesto.store</p>
+				<p>© Все права защищены ООО «МЕСТО»</p>
+			</div>
+		</div>
+	</div>
+</footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/libs/nouislider/nouislider.min.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+
+</html>
