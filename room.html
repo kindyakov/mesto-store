@@ -16,10 +16,10 @@
 
 
 
-<link rel="stylesheet" href="assets/libs/air-datepicker/air-datepicker.min.css?_v=20240526080017">
-<link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.css?_v=20240526080017">
-<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20240526080017">
-<link rel="stylesheet" href="css/style.min.css?_v=20240526080017">
+<link rel="stylesheet" href="assets/libs/air-datepicker/air-datepicker.min.css?_v=20240530144219">
+<link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.css?_v=20240530144219">
+<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20240530144219">
+<link rel="stylesheet" href="css/style.min.css?_v=20240530144219">
 
 <script type="text/javascript" defer>
 	function loadYandexMetrica() {
@@ -145,9 +145,13 @@
 					<span>Доступ к вашей кладовке круглосуточный</span>
 				</div>
 				<div class="header__contacts">
-					<a href="tel:+74951651565" class="header__phone">+7 (495) 165-15-65</a>
-					<address data-da=".header__nav_block,576,last"><span>м. Борисово</span><span>Борисовские пруды 22 к4,
-							с1</span></address>
+					<div class="">
+						<a href="tel:+74951651565" class="header__phone">+7 (495) 165-15-65</a>
+						<address data-da=".header__nav_block,576,last">
+							<span>Борисовские пруды 22 к4, с1</span>
+						</address>
+					</div>
+					<button class="button-3 btn-open-modal-feedback-form"><span>Заказать звонок</span></button>
 				</div>
 				<a href="authorization.html" class="header__account account-link-header link-update">
 					<i>
@@ -209,7 +213,25 @@
             <div class="room__slider swiper slider-room" data-da=".room__content,889,1">
               <div class="room__slider-wrapper swiper-wrapper">
                 <div class="room__slider-slide swiper-slide">
-                  <img src="img/rooms.webp" alt="Ячейка">
+                  <img src="img/entrance.webp" alt="Фото терминала">
+                </div>
+                <div class="room__slider-slide swiper-slide">
+                  <img src="img/client-zone.webp" alt="Фото терминала">
+                </div>
+                <div class="room__slider-slide swiper-slide">
+                  <img src="img/trolleys.webp" alt="Фото терминала">
+                </div>
+                <div class="room__slider-slide swiper-slide">
+                  <img src="img/corridor.webp" alt="Фото терминала">
+                </div>
+                <div class="room__slider-slide swiper-slide">
+                  <img src="img/corridor-2.webp" alt="Фото терминала">
+                </div>
+                <div class="room__slider-slide swiper-slide">
+                  <img src="img/castle.webp" alt="Фото терминала">
+                </div>
+                <div class="room__slider-slide swiper-slide">
+                  <img src="img/video-surveillance.webp" alt="Фото терминала">
                 </div>
                 <div class="room__slider-slide swiper-slide">
                   <img src="img/rooms.webp" alt="Ячейка">
@@ -287,8 +309,8 @@
       </svg>
     </div>
     <div class="cards-slider__slide_prices">
-      <span class="cards-slider__slide_price price-count">3 000 ₽</span>
-      <strike class="cards-slider__slide_price-old price-old">3 300 ₽</strike>
+      <span class="cards-slider__slide_price price-count">900 ₽</span>
+      <strike class="cards-slider__slide_price-old price-old">1 200 ₽</strike>
     </div>
     <a href="warehouse/1.html?volume_start=1&volume_end=1.5#schemes" class="cards-slider__slide_button button"><span>Забронировать</span></a>
   </div>
@@ -502,7 +524,7 @@
   <div class="map__container _container">
     <div class="map__body" data-tabs-init="map-tabs">
       <div class="map__header">
-        <h2 class="map__title h2">Адреса кладовок МЕСТО</h2>
+        <h2 class="map__title h2">Адрес кладовки МЕСТО</h2>
         <div class="map__tabs">
           <button class="map__tab _my-tabs-btn _tabs-bnt-active button"><span>На карте</span></button>
           <button class="map__tab _my-tabs-btn button"><span>Списком</span></button>
@@ -531,7 +553,7 @@
       <div class="questions__content">
         <h2 class="questions__title h2">Остались вопросы?</h2>
         <span class="questions__subtitle">Оставьте заявку и мы свяжемся с Вами</span>
-        <form class="questions__form form-questions" data-tag-form="Остались вопросы">
+        <form class="questions__form form-questions do-not-wait-server-response" data-tag-form="Остались вопросы" data-res-msg="Контактные данные записаны">
           <label class="questions__form_wrap-input">
             <input type="tel" name="username" class="questions__form_input" placeholder="Номер телефона"
               inputmode="tel">
@@ -831,9 +853,11 @@
 			</div>
 			<div class="questions__body">
 				<div class="questions__content">
-					<h2 class="questions__title h2">Оформление кладовок доступно с 9:00 до 21:00</h2>
-					<span class="questions__subtitle">Оставьте свои контакты и мы свяжемся с Вами</span>
-					<form class="questions__form form-questions" data-tag-form="ФОС открытия">
+					<h2 class="questions__title h2">Оставьте заявку</h2>
+					<span class="questions__subtitle" style="max-width: 300px;">Мы перезвоним вам с 9.00 до 21.00 для оформления
+						аренды кладовки</span>
+					<form class="questions__form form-questions do-not-wait-server-response" data-tag-form="ФОС открытия"
+						data-res-msg="Контактные данные записаны">
 						<label class="questions__form_wrap-input">
 							<input type="tel" name="username" class="questions__form_input" placeholder="Номер телефона"
 								inputmode="tel">
@@ -1565,10 +1589,49 @@
 		</div>
 	</div>
 </div>
+
+
+<div class="modal modal-information-warehouse">
+	<div class="modal__content">
+		<div class="modal__body">
+			<div class="modal__close">
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="modal-info-warehouse__top">
+				<h6 class="modal-info-warehouse__metro">Борисово</h6>
+				<address class="modal-info-warehouse__address">Борисовские Пруды, 22к4с1</address>
+			</div>
+
+			<ul class="modal-info-warehouse__location">
+				<li>м. м. Борисово (1 км)</li>
+			</ul>
+
+			<a href="tel:74951651565" class="modal-info-warehouse__phone">+7 (495) 165-15-65</a>
+
+			<ul class="modal-info-warehouse__info">
+				<li>
+					58
+					свободных
+					кладовок
+				</li>
+				<li>Круглосуточно</li>
+				<li>Без выходных</li>
+			</ul>
+
+			<div class="modal-info-warehouse__bottom">
+				<a href="/warehouse/1.html" class="modal-info-warehouse__link button">
+					<span>Выбрать кладовку</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
   
-<script src="assets/libs/swiper/swiper-bundle.min.js?_v=20240526080017"></script>
-<script src="assets/libs/nouislider/nouislider.min.js?_v=20240526080017"></script>
-<script src="js/app.min.js?_v=20240526080017"></script>
+<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+<script src="assets/libs/nouislider/nouislider.min.js"></script>
+<script src="js/app.min.20240530144219.js"></script>
 </body>
 
 </html>
