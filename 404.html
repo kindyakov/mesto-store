@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang='ru'>
+<html lang="ru">
 
 <head>
-  <title>Страница не найдена</title>
+  <title>&#x421;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x430; &#x43D;&#x435; &#x43D;&#x430;&#x439;&#x434;&#x435;&#x43D;&#x430;</title>
 <meta charset="UTF-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="Yyx7DTDT7mHL0xiOHn3f8FN6TBngMfwxkUK4idqcyZ0">
-<meta name="description" content="">
+<meta name="description" content>
 <link rel="shortcut icon" href="img/favicon/logo.svg">
 
+<link rel="stylesheet" href="assets/libs/air-datepicker/air-datepicker.min.css?_v=20240723192155">
+<link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.css?_v=20240723192155">
+<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20240723192155">
+<link rel="stylesheet" href="css/style.min.css?_v=20240723192155">
 
-
-
-
-
-
-<link rel="stylesheet" href="assets/libs/air-datepicker/air-datepicker.min.css?_v=20240530153310">
-<link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.css?_v=20240530153310">
-<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20240530153310">
-<link rel="stylesheet" href="css/style.min.css?_v=20240530153310">
 
 <script type="text/javascript" defer>
 	function loadYandexMetrica() {
@@ -44,12 +39,16 @@
 		window.removeEventListener('scroll', handleScrollEvent);
 	}
 
-	window.addEventListener('load', function () {
-		window.addEventListener('scroll', handleScrollEvent);
-	});
+	if (window.location.pathname.includes('/rent-room')) {
+		loadYandexMetrica()
+	} else {
+		window.addEventListener('load', function () {
+			window.addEventListener('scroll', handleScrollEvent);
+		});
+	}
 </script>
 <noscript>
-	<div><img src="https://mc.yandex.ru/watch/97074608" style="position:absolute; left:-9999px;" alt="" /></div>
+	<div><img src="https://mc.yandex.ru/watch/97074608" style="position:absolute; left:-9999px;" alt></div>
 </noscript>
 
 
@@ -86,44 +85,45 @@
 	}
 
 	window.addEventListener('load', function () {
-		window.addEventListener('scroll', handleScrollForCalltouch);
+		// window.addEventListener('scroll', handleScrollForCalltouch);
+		loadCalltouchScript()
 	});
 </script>
 
-<script src="https://api-maps.yandex.ru/v3/?apikey=b756749a-c9d8-4f04-a6c7-2653f5d9d0b7&lang=ru_RU" defer></script>
+<script src="https://api-maps.yandex.ru/v3/?apikey=b756749a-c9d8-4f04-a6c7-2653f5d9d0b7&amp;lang=ru_RU" defer></script>
 </head>
 
 <body>
-  <div class='wrapper'>
+  <div class="wrapper">
     <header class="header ">
 	<div class="header__body">
 		<div class="header__container _container">
 			<div class="header__content">
 				<a href="/" class="header__logo">
-					<svg class='icon icon-logo'>
-						<use xlink:href='img/svg/sprite.svg#logo'></use>
+					<svg class="icon icon-logo">
+						<use xlink:href="img/svg/sprite.svg#logo"/>
 					</svg>
 				</a>
 				<div class="header__operating-mode" data-da=".header__nav_block,576,first">
 					<b>24/7</b>
-					<span>Доступ к вашей кладовке круглосуточный</span>
+					<span>&#x414;&#x43E;&#x441;&#x442;&#x443;&#x43F; &#x43A; &#x432;&#x430;&#x448;&#x435;&#x439; &#x43A;&#x43B;&#x430;&#x434;&#x43E;&#x432;&#x43A;&#x435; &#x43A;&#x440;&#x443;&#x433;&#x43B;&#x43E;&#x441;&#x443;&#x442;&#x43E;&#x447;&#x43D;&#x44B;&#x439;</span>
 				</div>
 				<div class="header__contacts">
-					<div class="">
-						<a href="tel:+74951651565" class="header__phone">+7 (495) 165-15-65</a>
+					<div class>
+						<a href="https://mesto-store.ru/tel:+74951651565" class="header__phone">+7 (495) 165-15-65</a>
 						<address data-da=".header__nav_block,576,last">
-							<span>Борисовские пруды 22 к4, с1</span>
+							<span>&#x411;&#x43E;&#x440;&#x438;&#x441;&#x43E;&#x432;&#x441;&#x43A;&#x438;&#x435; &#x43F;&#x440;&#x443;&#x434;&#x44B; 22 &#x43A;4, &#x441;1</span>
 						</address>
 					</div>
-					<button class="button-3 btn-open-modal-feedback-form"><span>Заказать звонок</span></button>
+					<button class="button-3 btn-open-modal-feedback-form"><span>&#x417;&#x430;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x437;&#x432;&#x43E;&#x43D;&#x43E;&#x43A;</span></button>
 				</div>
-				<a href="authorization.html" class="header__account account-link-header link-update">
+				<a href="https://mesto-store.ru/authorization" class="header__account account-link-header link-update">
 					<i>
-						<svg class='icon icon-account'>
-							<use xlink:href='img/svg/sprite.svg#account'></use>
+						<svg class="icon icon-account">
+							<use xlink:href="img/svg/sprite.svg#account"/>
 						</svg>
 					</i>
-					<span>Личный кабинет</span>
+					<span>&#x41B;&#x438;&#x447;&#x43D;&#x44B;&#x439; &#x43A;&#x430;&#x431;&#x438;&#x43D;&#x435;&#x442;</span>
 				</a>
 				<div class="header-wrapper-burger">
 					<div class="header-burger">
@@ -135,45 +135,69 @@
 			</div>
 			<nav class="header__nav">
 				<ul class="header__ul">
-					<li class="header__li"><a href="calculator.html" class="header__link hover-link link-update">Калькулятор</a>
+					<li class="header__li"><a href="https://mesto-store.ru/calculator" class="header__link hover-link link-update">&#x41A;&#x430;&#x43B;&#x44C;&#x43A;&#x443;&#x43B;&#x44F;&#x442;&#x43E;&#x440;</a>
 					</li>
-					<li class="header__li"><a href="services.html" class="header__link hover-link link-update">Услуги
-							хранения</a>
+					<li class="header__li">
+						<button class="header__link dropdown-btn" data-dropdown-level="1">
+							<span>&#x423;&#x441;&#x43B;&#x443;&#x433;&#x438; &#x445;&#x440;&#x430;&#x43D;&#x435;&#x43D;&#x438;&#x44F;</span>
+							<svg class="icon icon-arrow-right">
+								<use xlink:href="img/svg/sprite.svg#arrow-right"/>
+							</svg>
+						</button>
+						<div class="dropdown">
+							<ul class="dropdown__list">
+								<li class="dropdown__li">
+									<a href="https://mesto-store.ru/for-your-business" class="dropdown__link link-update">
+										<span>&#x414;&#x43B;&#x44F; &#x432;&#x430;&#x448;&#x435;&#x433;&#x43E; &#x431;&#x438;&#x437;&#x43D;&#x435;&#x441;&#x430;</span>
+										<svg class="icon icon-arrow-right">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"/>
+										</svg>
+									</a>
+								</li>
+								<li class="dropdown__li">
+									<a href="https://mesto-store.ru/services.html#storage-services-tabs" class="dropdown__link link-update">
+										<span>&#x414;&#x43B;&#x44F; &#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x433;&#x43E; &#x445;&#x440;&#x430;&#x43D;&#x435;&#x43D;&#x438;&#x44F;</span>
+										<svg class="icon icon-arrow-right">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"/>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</li>
-					<li class="header__li"><a href="how-use-storage.html" class="header__link hover-link link-update">Как
-							пользоваться
-							кладовкой</a></li>
-					<li class="header__li"><a href="faq.html" class="header__link hover-link link-update">Вопрос-ответ</a></li>
-					<li class="header__li"><a href="about.html" class="header__link hover-link link-update">О нас</a></li>
+					<li class="header__li"><a href="https://mesto-store.ru/faq" class="header__link hover-link link-update">&#x412;&#x43E;&#x43F;&#x440;&#x43E;&#x441;-&#x43E;&#x442;&#x432;&#x435;&#x442;</a></li>
+					<li class="header__li"><a href="https://mesto-store.ru/how-use-storage" class="header__link hover-link link-update">&#x41A;&#x430;&#x43A;
+							&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C;&#x441;&#x44F;
+							&#x43A;&#x43B;&#x430;&#x434;&#x43E;&#x432;&#x43A;&#x43E;&#x439;</a></li>
+					<li class="header__li"><a href="https://mesto-store.ru/about" class="header__link hover-link link-update">&#x41E; &#x43D;&#x430;&#x441;</a></li>
 				</ul>
 				<div class="header__nav_block">
-					<a href="tel:+74951651565" class="header__phone">+7 (495) 165-15-65</a>
-					<button class="header__nav_btn-call btn-open-modal-feedback-form"><span>Заказать обратный
-							звонок</span></button>
+					<a href="https://mesto-store.ru/tel:+74951651565" class="header__phone">+7 (495) 165-15-65</a>
+					<button class="header__nav_btn-call btn-open-modal-feedback-form"><span>&#x417;&#x430;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x43E;&#x431;&#x440;&#x430;&#x442;&#x43D;&#x44B;&#x439;
+							&#x437;&#x432;&#x43E;&#x43D;&#x43E;&#x43A;</span></button>
 				</div>
 			</nav>
 		</div>
 	</div>
 </header>
-    <main class='main'>
+    <main class="main">
       <section class="not-found section">
         <div class="not-found__container _container">
           <div class="not-found__body">
             <div class="not-found__content">
               <div class="not-found__block">
-                <h1 class="not-found__title">Запрашиваемая страница не найдена</h1>
-                <p class="not-found__text text">Неправильно набран адрес, или такой страницы на сайте больше не
-                  существует</p>
+                <h1 class="not-found__title">&#x417;&#x430;&#x43F;&#x440;&#x430;&#x448;&#x438;&#x432;&#x430;&#x435;&#x43C;&#x430;&#x44F; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x430; &#x43D;&#x435; &#x43D;&#x430;&#x439;&#x434;&#x435;&#x43D;&#x430;</h1>
+                <p class="not-found__text text">&#x41D;&#x435;&#x43F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x44C;&#x43D;&#x43E; &#x43D;&#x430;&#x431;&#x440;&#x430;&#x43D; &#x430;&#x434;&#x440;&#x435;&#x441;, &#x438;&#x43B;&#x438; &#x442;&#x430;&#x43A;&#x43E;&#x439; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x44B; &#x43D;&#x430; &#x441;&#x430;&#x439;&#x442;&#x435; &#x431;&#x43E;&#x43B;&#x44C;&#x448;&#x435; &#x43D;&#x435;
+                  &#x441;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442;</p>
                 <a href="/" class="not-found__link button-3">
-                  <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    class="icon">
-                    <path d="M12 20L2 11L12 2" stroke="white" stroke-width="2" stroke-linecap="square" />
+                  <svg width="14" height="22" viewbox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <path d="M12 20L2 11L12 2" stroke="white" stroke-width="2" stroke-linecap="square"/>
                   </svg>
-                  <span>На главную</span>
+                  <span>&#x41D;&#x430; &#x433;&#x43B;&#x430;&#x432;&#x43D;&#x443;&#x44E;</span>
                 </a>
               </div>
               <div class="not-found__err-text">
-                <p>Ошибка</p>
+                <p>&#x41E;&#x448;&#x438;&#x431;&#x43A;&#x430;</p>
                 <span data-da=".not-found__block,768,1" class="not-found__err-type">404</span>
               </div>
             </div>
@@ -186,59 +210,85 @@
 		<div class="footer__body">
 			<div class="footer__content">
 				<div class="footer__block">
-					<a href="tel:+74951651565" class="footer__phone">+7 (495) 165-15-65</a>
-					<button class="footer__button button-2 btn-open-modal-feedback-form"><span>Заказать звонок</span></button>
+					<a href="https://mesto-store.ru/tel:+74951651565" class="footer__phone">+7 (495) 165-15-65</a>
+					<button class="footer__button button-2 btn-open-modal-feedback-form"><span>&#x417;&#x430;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x437;&#x432;&#x43E;&#x43D;&#x43E;&#x43A;</span></button>
 				</div>
 				<div class="footer__block data-da">
-					<a href="mailto:info@mesto-store.ru" class="footer__mail">info@mesto-store.ru</a>
-					<span>Клиентская служба</span>
+					<a href="https://mesto-store.ru/mailto:info@mesto-store.ru" class="footer__mail">info@mesto-store.ru</a>
+					<span>&#x41A;&#x43B;&#x438;&#x435;&#x43D;&#x442;&#x441;&#x43A;&#x430;&#x44F; &#x441;&#x43B;&#x443;&#x436;&#x431;&#x430;</span>
 				</div>
 				<div class="footer__block">
 					<div class="footer__messengers" data-da=".footer__block.data-da,992,last">
 						<a href="https://vk.com/mesto_kladovki" class="footer__messenger" target="_blank">
-							<svg class='icon icon-vk'>
-								<use xlink:href='img/svg/sprite.svg#vk'></use>
+							<svg class="icon icon-vk">
+								<use xlink:href="img/svg/sprite.svg#vk"/>
 							</svg>
 						</a>
 						<a href="https://wa.me/79690190864" class="footer__messenger" target="_blank">
-							<svg class='icon icon-whatsapp'>
-								<use xlink:href='img/svg/sprite.svg#whatsapp'></use>
+							<svg class="icon icon-whatsapp">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"/>
 							</svg>
 						</a>
 						<a href="https://t.me/MestoKladovki" class="footer__messenger" target="_blank">
-							<svg class='icon icon-telegram'>
-								<use xlink:href='img/svg/sprite.svg#telegram'></use>
+							<svg class="icon icon-telegram">
+								<use xlink:href="img/svg/sprite.svg#telegram"/>
 							</svg>
 						</a>
 					</div>
-					<span data-da=".footer__block.data-da,992,last">Мы в соцсетях</span>
+					<span data-da=".footer__block.data-da,992,last">&#x41C;&#x44B; &#x432; &#x441;&#x43E;&#x446;&#x441;&#x435;&#x442;&#x44F;&#x445;</span>
 				</div>
 				<div class="footer__block">
 					<address class="footer__address">
-						<svg class='icon icon-placemark'>
-							<use xlink:href='img/svg/sprite.svg#placemark'></use>
+						<svg class="icon icon-placemark">
+							<use xlink:href="img/svg/sprite.svg#placemark"/>
 						</svg>
-						<span>Борисовские пруды 22 к4, с1</span>
+						<span>&#x411;&#x43E;&#x440;&#x438;&#x441;&#x43E;&#x432;&#x441;&#x43A;&#x438;&#x435; &#x43F;&#x440;&#x443;&#x434;&#x44B; 22 &#x43A;4, &#x441;1</span>
 					</address>
 				</div>
 				<div class="footer__block info-u">
-					<span>ИП Брысина Е.А.</span>
+					<span>&#x418;&#x41F; &#x411;&#x440;&#x44B;&#x441;&#x438;&#x43D;&#x430; &#x415;.&#x410;.</span>
 					<p>
-						<span>ИНН 771921821260</span>
-						<span>ОГРН 321774600399092</span>
+						<span>&#x418;&#x41D;&#x41D; 771921821260</span>
+						<span>&#x41E;&#x413;&#x420;&#x41D; 321774600399092</span>
 					</p>
 				</div>
 			</div>
+			<div class="footer__files">
+				<a href="https://mesto-store.ru/assets/files/Oferta_Fizlitsa.pdf" target="_blank">
+					<span>&#x41E;&#x444;&#x435;&#x440;&#x442;&#x430; &#x434;&#x43B;&#x44F; &#x444;&#x438;&#x437;.&#x43B;&#x438;&#x446;&#x430;</span>
+					<svg class="icon icon-pdf">
+						<use xlink:href="img/svg/sprite.svg#pdf"/>
+					</svg>
+				</a>
+				<a href="https://mesto-store.ru/assets/files/Oferta_Yurlitsa.pdf" target="_blank">
+					<span>&#x41E;&#x444;&#x435;&#x440;&#x442;&#x430; &#x434;&#x43B;&#x44F; &#x44E;&#x440;.&#x43B;&#x438;&#x446;&#x430;</span>
+					<svg class="icon icon-pdf">
+						<use xlink:href="img/svg/sprite.svg#pdf"/>
+					</svg>
+				</a>
+				<a href="https://mesto-store.ru/assets/files/Agreement-on-autopayments.pdf" target="_blank">
+					<span>&#x421;&#x43E;&#x433;&#x43B;&#x430;&#x448;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x431; &#x430;&#x432;&#x442;&#x43E;&#x43F;&#x43B;&#x430;&#x442;&#x435;&#x436;&#x430;&#x445;</span>
+					<svg class="icon icon-pdf">
+						<use xlink:href="img/svg/sprite.svg#pdf"/>
+					</svg>
+				</a>
+				<a href="https://mesto-store.ru/assets/files/Rules-conduct.pdf" target="_blank">
+					<span>&#x41F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x430; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x44F;</span>
+					<svg class="icon icon-pdf">
+						<use xlink:href="img/svg/sprite.svg#pdf"/>
+					</svg>
+				</a>
+			</div>
 			<div class="footer__bottom">
-				<p>Обращаем ваше внимание на то, что данный Интернет-сайт носит исключительно информационный характер и ни при
-					каких
-					условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской
-					Федерации.
-					Для получения подробной информации о стоимости аренды боксов, сопутствующих товаров, транспортных услугах и
-					страховании,
-					обращайтесь к менеджерам по продажам. Права на сайт принадлежат ИП Брысина Е.А. (ИНН 771921821260, ОГРН
-					321774600399092) тел. +7 (495) 165-15-65, адрес эл. почты info@mesto-store.ru</p>
-				<p>© Все права защищены ИП Брысина Е.А.</p>
+				<p>&#x41E;&#x431;&#x440;&#x430;&#x449;&#x430;&#x435;&#x43C; &#x432;&#x430;&#x448;&#x435; &#x432;&#x43D;&#x438;&#x43C;&#x430;&#x43D;&#x438;&#x435; &#x43D;&#x430; &#x442;&#x43E;, &#x447;&#x442;&#x43E; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x418;&#x43D;&#x442;&#x435;&#x440;&#x43D;&#x435;&#x442;-&#x441;&#x430;&#x439;&#x442; &#x43D;&#x43E;&#x441;&#x438;&#x442; &#x438;&#x441;&#x43A;&#x43B;&#x44E;&#x447;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E; &#x438;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x438;&#x43E;&#x43D;&#x43D;&#x44B;&#x439; &#x445;&#x430;&#x440;&#x430;&#x43A;&#x442;&#x435;&#x440; &#x438; &#x43D;&#x438; &#x43F;&#x440;&#x438;
+					&#x43A;&#x430;&#x43A;&#x438;&#x445;
+					&#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x44F;&#x445; &#x43D;&#x435; &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x43F;&#x443;&#x431;&#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x439; &#x43E;&#x444;&#x435;&#x440;&#x442;&#x43E;&#x439;, &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x44F;&#x435;&#x43C;&#x43E;&#x439; &#x43F;&#x43E;&#x43B;&#x43E;&#x436;&#x435;&#x43D;&#x438;&#x44F;&#x43C;&#x438; &#x421;&#x442;&#x430;&#x442;&#x44C;&#x438; 437 &#x413;&#x440;&#x430;&#x436;&#x434;&#x430;&#x43D;&#x441;&#x43A;&#x43E;&#x433;&#x43E; &#x43A;&#x43E;&#x434;&#x435;&#x43A;&#x441;&#x430; &#x420;&#x43E;&#x441;&#x441;&#x438;&#x439;&#x441;&#x43A;&#x43E;&#x439;
+					&#x424;&#x435;&#x434;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438;.
+					&#x414;&#x43B;&#x44F; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x43E;&#x434;&#x440;&#x43E;&#x431;&#x43D;&#x43E;&#x439; &#x438;&#x43D;&#x444;&#x43E;&#x440;&#x43C;&#x430;&#x446;&#x438;&#x438; &#x43E; &#x441;&#x442;&#x43E;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x438; &#x430;&#x440;&#x435;&#x43D;&#x434;&#x44B; &#x431;&#x43E;&#x43A;&#x441;&#x43E;&#x432;, &#x441;&#x43E;&#x43F;&#x443;&#x442;&#x441;&#x442;&#x432;&#x443;&#x44E;&#x449;&#x438;&#x445; &#x442;&#x43E;&#x432;&#x430;&#x440;&#x43E;&#x432;, &#x442;&#x440;&#x430;&#x43D;&#x441;&#x43F;&#x43E;&#x440;&#x442;&#x43D;&#x44B;&#x445; &#x443;&#x441;&#x43B;&#x443;&#x433;&#x430;&#x445; &#x438;
+					&#x441;&#x442;&#x440;&#x430;&#x445;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x438;,
+					&#x43E;&#x431;&#x440;&#x430;&#x449;&#x430;&#x439;&#x442;&#x435;&#x441;&#x44C; &#x43A; &#x43C;&#x435;&#x43D;&#x435;&#x434;&#x436;&#x435;&#x440;&#x430;&#x43C; &#x43F;&#x43E; &#x43F;&#x440;&#x43E;&#x434;&#x430;&#x436;&#x430;&#x43C;. &#x41F;&#x440;&#x430;&#x432;&#x430; &#x43D;&#x430; &#x441;&#x430;&#x439;&#x442; &#x43F;&#x440;&#x438;&#x43D;&#x430;&#x434;&#x43B;&#x435;&#x436;&#x430;&#x442; &#x418;&#x41F; &#x411;&#x440;&#x44B;&#x441;&#x438;&#x43D;&#x430; &#x415;.&#x410;. (&#x418;&#x41D;&#x41D; 771921821260, &#x41E;&#x413;&#x420;&#x41D;
+					321774600399092) &#x442;&#x435;&#x43B;. +7 (495) 165-15-65, &#x430;&#x434;&#x440;&#x435;&#x441; &#x44D;&#x43B;. &#x43F;&#x43E;&#x447;&#x442;&#x44B; info@mesto-store.ru</p>
+				<p>&#xA9; &#x412;&#x441;&#x435; &#x43F;&#x440;&#x430;&#x432;&#x430; &#x437;&#x430;&#x449;&#x438;&#x449;&#x435;&#x43D;&#x44B; &#x418;&#x41F; &#x411;&#x440;&#x44B;&#x441;&#x438;&#x43D;&#x430; &#x415;.&#x410;.</p>
 			</div>
 		</div>
 	</div>
@@ -247,7 +297,7 @@
   
 <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
 <script src="assets/libs/nouislider/nouislider.min.js"></script>
-<script src="js/app.min.20240530153309.js"></script>
+<script src="js/app.min.20240723192154.js"></script>
 </body>
 
 </html>
