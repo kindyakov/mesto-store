@@ -10,10 +10,10 @@
 <meta name="description" content="Арендовать склад, кладовку для хранения в Москве. Сервис хранения вещей МЕСТО предлагает аренду индивидуальных боксов в разных округах Москвы. Лучшие предложения на маленькие кладовки! ➤ Автоматизированный терминал ➤ Доступ 24/7">
 <link rel="shortcut icon" href="img/favicon/logo.svg">
 
-<link rel="stylesheet" href="assets/libs/air-datepicker/air-datepicker.min.css?_v=20240902231044">
-<link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.css?_v=20240902231044">
-<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20240902231044">
-<link rel="stylesheet" href="css/style.min.css?_v=20240902231044">
+<link rel="stylesheet" href="assets/libs/air-datepicker/air-datepicker.min.css?_v=20240918010624">
+<link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.css?_v=20240918010624">
+<link rel="stylesheet" href="assets/libs/nouislider/nouislider.min.css?_v=20240918010624">
+<link rel="stylesheet" href="css/style.min.css?_v=20240918010624">
 
 
 <script type="text/javascript" defer>
@@ -39,13 +39,13 @@
 		window.removeEventListener('scroll', handleScrollEvent);
 	}
 
-	if (window.location.pathname.includes('/rent-room')) {
-		loadYandexMetrica()
-	} else {
-		window.addEventListener('load', function () {
+	window.addEventListener('DOMContentLoaded', function () {
+		if (window.scrollY > 0) {
+			handleScrollEvent()
+		} else {
 			window.addEventListener('scroll', handleScrollEvent);
-		});
-	}
+		}
+	});
 </script>
 <noscript>
 	<div><img src="https://mc.yandex.ru/watch/97074608" style="position:absolute; left:-9999px;" alt></div>
@@ -69,28 +69,47 @@
 		window.removeEventListener('scroll', handleScrollForGoogleTagManager);
 	}
 
-	window.addEventListener('load', function () {
+	window.addEventListener('DOMContentLoaded', function () {
 		window.addEventListener('scroll', handleScrollForGoogleTagManager);
 	});
 </script>
 
 
 <script defer>
-	function loadCalltouchScript() {
+	function loadCallTouchScript() {
 		(function (w, d, n, c) { w.CalltouchDataObject = n; w[n] = function () { w[n]["callbacks"].push(arguments) }; if (!w[n]["callbacks"]) { w[n]["callbacks"] = [] } w[n]["loaded"] = false; if (typeof c !== "object") { c = [c] } w[n]["counters"] = c; for (var i = 0; i < c.length; i += 1) { p(c[i]) } function p(cId) { var a = d.getElementsByTagName("script")[0], s = d.createElement("script"), i = function () { a.parentNode.insertBefore(s, a) }, m = typeof Array.prototype.find === 'function', n = m ? "init-min.js" : "init.js"; s.async = true; s.src = "https://mod.calltouch.ru/" + n + "?id=" + cId; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", i, false) } else { i() } } })(window, document, "ct", "ssr2n41b");
 	}
-	function handleScrollForCalltouch() {
-		loadCalltouchScript();
-		window.removeEventListener('scroll', handleScrollForCalltouch);
+	function handleScrollForCallTouch() {
+		loadCallTouchScript();
+		window.removeEventListener('scroll', handleScrollForCallTouch);
 	}
 
-	window.addEventListener('load', function () {
-		// window.addEventListener('scroll', handleScrollForCalltouch);
-		loadCalltouchScript()
+	window.addEventListener('DOMContentLoaded', function () {
+		if (window.scrollY > 0) {
+			handleScrollForCallTouch()
+		} else {
+			window.addEventListener('scroll', handleScrollForCallTouch);
+		}
 	});
 </script>
 
-<script src="https://api-maps.yandex.ru/v3/?apikey=b756749a-c9d8-4f04-a6c7-2653f5d9d0b7&lang=ru_RU" defer></script>
+
+<script defer>
+	function loadYandexMap() {
+		var script = document.createElement("script");
+		script.src = "https://api-maps.yandex.ru/v3/?apikey=b756749a-c9d8-4f04-a6c7-2653f5d9d0b7&lang=ru_RU";
+		document.body.appendChild(script);
+	}
+
+	function handleScrollForYandexMap() {
+		loadYandexMap();
+		window.removeEventListener('scroll', handleScrollForYandexMap);
+	}
+
+	window.addEventListener('DOMContentLoaded', function () {
+		window.addEventListener('scroll', handleScrollForYandexMap);
+	});
+</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
@@ -136,6 +155,9 @@
 						<a href="https://mesto-store.ru/tel:+74951651565" class="header__phone">+7 (495) 165-15-65</a>
 						<address data-da=".header__nav_block,576,last">
 							<span>Борисовские пруды 22 к4, с1</span>
+						</address>
+						<address data-da=".header__nav_block,576,last">
+							<span>Маршала Катукова, 9А</span>
 						</address>
 					</div>
 					<button class="button-3 btn-open-modal-feedback-form"><span>Заказать звонок</span></button>
@@ -188,7 +210,8 @@
 							</ul>
 						</div>
 					</li>
-					<li class="header__li"><a href="https://mesto-store.ru/faq" class="header__link hover-link link-update">Вопрос-ответ</a></li>
+					<li class="header__li"><a href="https://mesto-store.ru/faq" class="header__link hover-link link-update">Вопрос-ответ</a>
+					</li>
 					<li class="header__li"><a href="https://mesto-store.ru/how-use-storage" class="header__link hover-link link-update">Как
 							пользоваться
 							кладовкой</a></li>
@@ -224,7 +247,8 @@
           <span class="calculator__info-span">Чем больше объем, тем дешевле каждый метр</span>
         </div>
         <div class="calculator__tabs">
-          <button class="calculator__tab _my-tabs-btn button _tab-btn-active"><span>Калькулятор стоимости</span></button>
+          <button class="calculator__tab _my-tabs-btn button _tab-btn-active"><span>Калькулятор
+              стоимости</span></button>
           <button class="calculator__tab _my-tabs-btn button"><span>Калькулятор объема</span></button>
         </div>
       </div>
@@ -233,7 +257,7 @@
           <div class="calculator__form_block">
             <h5 class="calculator__form_title">Выберите терминал</h5>
             <select name="warehouse_id" class="calculator__form_select select-calculator">
-              <option value="0">Борисовские пруды 22 к 4 с1</option>
+              <option value="0">Все склады</option>
             </select>
           </div>
           <div class="calculator__form_wrap-range">
@@ -245,7 +269,7 @@
             <div class="calculator__form_range range-calculator" data-type-range="duration" data-step="1" data-connect="lower" data-tooltips></div>
           </div>
           <div class="calculator__form_bottom">
-            <span class="calculator__form_price price-calculator">1 800 ₽/мес</span>
+            <span class="calculator__form_price price-calculator">2 500 ₽/мес</span>
             <button class="calculator__form_button btn-calculator button-2 btn-cost-calculator"><span>Подобрать
                 варианты</span></button>
           </div>
@@ -255,11 +279,11 @@
             <img src alt="Фото кладовки" class="img-preview-room">
           </div>
           <h4 class="calculator__preview_title">Выбранная кладовка</h4>
-          <p class="calculator__preview_text text">Идеальная площадь для длительного хранения сезонных вещей,
-            таких как: книги, стиральная машина, шины, сноуборд,
-            малогабаритная мебель и прочее. Несмотря на компактные размеры и небольшую цену, такие склады являются
-            довольно
-            вместительными.</p>
+          <p class="calculator__preview_text text" style="min-height: 125px;">Чем можно заполнить: 8 коробок размером
+            60х40х40 см или аналогичная по объему посуда, инструменты, книги, сезонная
+            одежда.<br><br>Это идеальное решение для хранения небольших вещей, например, сезонной одежды, игрушек,
+            инструментов
+            или книг.</p>
         </div>
       </div>
       <div class="calculator__content _my-tabs-content area-calculator">
@@ -458,12 +482,18 @@
 					</div>
 					<span data-da=".footer__block.data-da,992,last">Мы в соцсетях</span>
 				</div>
-				<div class="footer__block">
+				<div class="footer__block" style="align-items: flex-start;">
 					<address class="footer__address">
 						<svg class="icon icon-placemark">
 							<use xlink:href="img/svg/sprite.svg#placemark"/>
 						</svg>
 						<span>Борисовские пруды 22 к4, с1</span>
+					</address>
+					<address class="footer__address">
+						<svg class="icon icon-placemark">
+							<use xlink:href="img/svg/sprite.svg#placemark"/>
+						</svg>
+						<span>Маршала Катукова, 9А</span>
 					</address>
 				</div>
 				<div class="footer__block info-u">
@@ -1437,7 +1467,6 @@
 	</div>
 </div>
 
-
 <div class="modal modal-information-warehouse">
 	<div class="modal__content">
 		<div class="modal__body">
@@ -1475,10 +1504,9 @@
 		</div>
 	</div>
 </div>
-  
-<script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
 <script src="assets/libs/nouislider/nouislider.min.js"></script>
-<script src="js/app.min.20240902231043.js"></script>
+<script src="js/app.min.20240918010621.js"></script>
 </body>
 
 </html>
